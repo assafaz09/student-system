@@ -1,0 +1,389 @@
+/* Modern Navbar Styles */
+.modern-navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem 0;
+}
+
+/* Profile Section */
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-name {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.profile-status {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Navigation Links */
+.navbar-links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateX(-5px);
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item.active .nav-indicator {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.nav-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-description {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.nav-indicator {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 4px;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Logout Button */
+.navbar-footer {
+  padding: 0 1rem;
+  margin-top: auto;
+}
+
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logout-icon {
+  font-size: 1.3rem;
+}
+
+.logout-text {
+  font-weight: 500;
+}
+
+/* Scrollbar Styling */
+.modern-navbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modern-navbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modern-navbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.modern-navbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Content Adjustment for Desktop */
+@media (min-width: 1025px) {
+  body {
+    margin-right: 280px;
+  }
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .modern-navbar {
+    width: 240px;
+  }
+
+  body {
+    margin-right: 240px;
+  }
+
+  .nav-item {
+    padding: 0.875rem;
+  }
+
+  .nav-icon {
+    font-size: 1.3rem;
+    min-width: 25px;
+  }
+
+  .nav-label {
+    font-size: 0.9rem;
+  }
+
+  .nav-description {
+    font-size: 0.75rem;
+  }
+
+  .profile-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .profile-name {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Layout - Bottom Navigation */
+@media (max-width: 768px) {
+  .modern-navbar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    padding: 0.75rem 0.5rem;
+    height: auto;
+  }
+
+  .navbar-profile {
+    display: none;
+  }
+
+  .navbar-links {
+    flex-direction: row;
+    flex: 1;
+    gap: 0.25rem;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .nav-item {
+    flex-direction: column;
+    padding: 0.75rem 0.5rem;
+    gap: 0.25rem;
+    min-width: 60px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .nav-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .nav-content {
+    align-items: center;
+  }
+
+  .nav-label {
+    font-size: 0.75rem;
+  }
+
+  .nav-description {
+    display: none;
+  }
+
+  .nav-indicator {
+    bottom: 0;
+    top: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+  }
+
+  .nav-item.active .nav-indicator {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .navbar-footer {
+    display: none;
+  }
+
+  body {
+    margin-right: 0;
+    padding-bottom: 80px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .nav-item {
+    min-width: 50px;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .nav-icon {
+    font-size: 1.2rem;
+  }
+
+  .nav-label {
+    font-size: 0.7rem;
+  }
+
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .nav-item {
+    min-width: 45px;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .nav-icon {
+    font-size: 1.1rem;
+  }
+
+  .nav-label {
+    font-size: 0.65rem;
+  }
+
+  body {
+    padding-bottom: 65px;
+  }
+}
+
+/* Animation for page transitions */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Ensure content doesn't overlap on mobile */
+@media (max-width: 768px) {
+  .journal-page,
+  .courses-page,
+  .mission-page,
+  .home-page {
+    padding-bottom: 80px;
+  }
+}

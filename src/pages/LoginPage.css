@@ -1,0 +1,135 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.login-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Universal centered container for all pages */
+.centered-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 2rem 1rem;
+}
+
+/* Universal main card style for all pages */
+.main-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  padding: 3rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Update login-card to use main-card styles */
+.login-card {
+  composes: main-card;
+}
+
+.login-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 1.1rem;
+  color: #3730a3;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-input {
+  padding: 0.9rem 1.1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+
+.login-input:focus {
+  border-color: #3730a3;
+  outline: none;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #1e40af;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.2);
+}
+
+.login-switch-text {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #3730a3;
+}
+
+.login-switch-link {
+  color: #1e3a8a;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.login-switch-link:hover {
+  color: #fbbf24;
+}
+
+@media (max-width: 500px) {
+  .main-card {
+    padding: 2rem 1rem;
+  }
+  .login-title {
+    font-size: 1.5rem;
+  }
+}
