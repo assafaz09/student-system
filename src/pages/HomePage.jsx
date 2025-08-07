@@ -210,7 +210,7 @@ export default function HomePage() {
                 <div className="hero-right">
                   <h1 className="hero-title">
                     <span className="title-line">המשתמשים</span>
-                    <span className="title-line">שכבר מתפתחים</span>
+                    <span className="title-line">שכבר לומדים</span>
                     <span className="brand-name">איתנו</span>
                 
                   </h1>
