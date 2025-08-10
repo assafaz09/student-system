@@ -11,6 +11,11 @@ export default defineConfig({
   preview: {
     host: "0.0.0.0",
     port: 4173,
+    allowedHosts: [
+      "front-student-system-production.up.railway.app",
+      "localhost",
+      "127.0.0.1",
+    ],
   },
   build: {
     outDir: "dist",
