@@ -1,7 +1,7 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL
   ? `${import.meta.env.VITE_API_URL}/api`
   : import.meta.env.PROD
-  ? "https://your-backend-url.railway.app/api" // נשנה את זה כשנעלה את הבאק
+  ? "https://student-system-production.up.railway.app/api" // הבאק שלך עכשיו!
   : "http://localhost:5000/api";
 
 class ApiService {
