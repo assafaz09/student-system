@@ -47,7 +47,7 @@ export default function LoginPage() {
     <div className="login-bg">
       <div className="centered-container">
         <div className="login-card main-card">
-          <h1 className="login-title">ברוך הבא!</h1>
+          <h1 className="login-title">!ברוך הבא</h1>
           <h2 className="login-subtitle">מערכת לניהול למידה נכונה</h2>
 
           {error && (
