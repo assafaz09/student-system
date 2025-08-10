@@ -43,8 +43,21 @@ class ApiService {
       console.log(`📡 Response status:`, response.status);
       console.log(`📡 Response headers:`, response.headers);
 
-      const data = await response.json();
-      console.log(`📄 Response data:`, data);
+      // Check if response has content before parsing JSON
+      const text = await response.text();
+      console.log(`📄 Response text:`, text);
+
+      let data;
+      if (text) {
+        try {
+          data = JSON.parse(text);
+        } catch (parseError) {
+          console.error(`❌ JSON Parse Error:`, parseError);
+          throw new Error(`Invalid JSON response: ${text}`);
+        }
+      } else {
+        data = {};
+      }
 
       if (!response.ok) {
         // Handle authentication errors
